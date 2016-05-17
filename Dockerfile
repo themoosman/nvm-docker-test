@@ -16,6 +16,8 @@ RUN mkdir -p ${WORKDIR} && cd ${WORKDIR}
 #Copy the local conf to the image
 COPY .nvm ${WORKDIR}/
 
+chmod -R 777 /tmp/git/*
+
 #RUN source /tmp/git/.nvm/nvm.sh;
 
 ADD sleep.sh /tmp/sleep.sh
