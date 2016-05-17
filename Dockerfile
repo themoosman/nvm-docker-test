@@ -18,4 +18,6 @@ COPY .nvm ${WORKDIR}/
 
 #RUN source /tmp/git/.nvm/nvm.sh;
 
-
+ADD sleep.sh /tmp/sleep.sh
+WORKDIR /tmp
+ENTRYPOINT ["/tmp/sleep.sh"]
